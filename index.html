@@ -3,147 +3,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jornal A.T.A</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #1e1e2f;
-      --section-bg: #2c2c3c;
-      --text-color: #f0f0f0;
-      --accent-color: #3498db;
-      --accent-green: #2ecc71;
-      --card-bg: #2a2a3a;
-      --highlight-bg: #313144;
-    }body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
-
-header.header-jornal {
-  background: linear-gradient(135deg, #2c3e50, var(--accent-color));
-  color: white;
-  padding: 30px 20px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }header.header-jornal {
+  background: #1e1e2f;
+  padding: 40px 20px 20px;
   text-align: center;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-bottom: 2px solid #3498db;
 }
 
-header.subheader {
-  background-color: #29293a;
+header.header-jornal h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+header.header-jornal p {
+  font-style: italic;
+  color: #bbb;
+}
+
+header.sub-info {
   text-align: center;
-  padding: 10px;
-  font-size: 0.95em;
-  color: #ccc;
+  padding: 15px;
+  background-color: #1a1a1a;
+  border-top: 1px solid #2c3e50;
 }
 
 section {
-  background-color: var(--section-bg);
+  background: #1e1e2f;
+  margin: 20px auto;
   padding: 25px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
 }
 
 h2 {
-  color: var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: 2px solid #3498db;
   padding-bottom: 8px;
-  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 h3, h4 {
-  color: #81cfff;
-  margin-top: 20px;
+  color: #87cefa;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
-  color: #ddd;
+  margin-top: 15px;
 }
 
 th, td {
+  padding: 12px;
   border: 1px solid #444;
-  padding: 10px 15px;
+  text-align: left;
 }
 
 th {
-  background-color: #3a3a4a;
+  background-color: #3498db;
   color: white;
 }
 
 tr:nth-child(even) {
-  background-color: #2e2e3e;
-}
-
-.highlight {
-  background-color: var(--highlight-bg);
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 10px;
-  transition: transform 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-.btn-azul {
-  background-color: var(--accent-color);
-}
-
-.btn-verde {
-  background-color: var(--accent-green);
-}
-
-.event-card {
-  background-color: var(--card-bg);
-  padding: 20px;
-  margin-bottom: 15px;
-  border-left: 5px solid var(--accent-color);
-  border-radius: 6px;
-}
-
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  color: #999;
-  font-size: 0.9em;
-  border-top: 1px solid #333;
-}
-
-.social-links a {
-  color: #bbb;
-  margin: 0 10px;
-  font-size: 1.5em;
-}
-
-.social-links a:hover {
-  color: var(--accent-color);
+  background-color: #2a2a3d;
 }
 
 a {
-  color: #7fcfff;
+  color: #66ccff;
   text-decoration: none;
 }
 
@@ -151,79 +86,147 @@ a:hover {
   text-decoration: underline;
 }
 
+.highlight, .event-card {
+  background-color: #2a2a3d;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.botoes-simulados, .button-container, .centered-btn {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.botao-azul, .botao-verde, .simulado-btn, .horario-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.botao-verde {
+  background-color: #2ecc71;
+}
+
+.simulado-btn:hover,
+.botao-azul:hover,
+.botao-verde:hover,
+.horario-btn:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9em;
+  background-color: #1a1a1a;
+  color: #999;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #ccc;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3498db;
+}
+
   </style>
 </head>
 <body>
   <header class="header-jornal">
-    <h1>Jornal A.T.A</h1>
-    <p>Atualizações da nossa escola — edição AGOSTO/2025</p>
-  </header>
-  <header class="subheader">
-    Informações Oficiais | Desenvolvido por Vitor Rodrigues
-  </header>  <div class="container">
-    <section>
-      <h2>🏆 Destaque do Mês</h2>
-      <h3>Prova Paulista 2025 - 2° Bimestre</h3>
-      <div class="highlight">
-        <p><strong>📅 Calendário:</strong></p>
-        <ul>
-          <li><strong>Inscrições:</strong> 10/06 a 20/06</li>
-          <li><strong>Prova:</strong> 05/07 (Salas 1 a 10)</li>
-          <li><strong>Resultados:</strong> 25/07 no mural</li>
-        </ul>
-      </div>
-      <h4>📘 Plantões de Dúvida:</h4>
-      <table>
-        <tr><th>Matéria</th><th>Dia/Horário</th><th>Local</th></tr>
-        <tr><td>Matemática</td><td>Terças, 14h</td><td>Sala 7</td></tr>
-        <tr><td>Português</td><td>Quintas, 15h</td><td>Biblioteca</td></tr>
-      </table>
-      <div style="text-align: center">
-        <a href="#" class="btn btn-azul">📄 Regulamento Completo</a>
-        <a href="#" class="btn btn-verde">🖊️ Simulado Online</a>
-      </div>
-    </section><section>
-  <h2>📌 Quadro de Avisos</h2>
-  <div class="event-card">
-    <h3>📣 Vagas Abertas</h3>
-    <p><strong>Vestibular UNESP 2026</strong><br>Inscrições até 30/08...</p>
-    <a href="#">Leia mais</a>
-  </div>
-  <div class="event-card">
-    <h4>Processo Seletivo ETEC 2026</h4>
-    <p>Inscrições a partir de 15/07...</p>
-    <a href="#">Leia mais</a>
-  </div>
-</section>
-
-<section>
-  <h2>🧠 Desafio do Mês</h2>
-  <div class="event-card" style="text-align: center">
-    <h3>Simulado da Prova Paulista</h3>
-    <a href="#" class="btn btn-azul">▶️ RESPONDER SIMULADO</a>
-  </div>
-</section>
-
-<section>
-  <h2>🖼️ Galeria de Trabalhos</h2>
-  <h3>Projetos de Ciências:</h3>
-  <ul>
-    <li>Robótica Sustentável</li>
-    <li>Energia Solar Caseira</li>
-    <li>Plantio Hidropônico</li>
-  </ul>
-  <div style="text-align: center">
-    <a href="#" class="btn btn-azul">📸 Ver Galeria</a>
-  </div>
-</section>
-
+    <h1>Bem-vindo ao Jornal A.T.A</h1>
+    <p>Notícias e atualizações sobre nossa escola - LANÇAMENTO OFICIAL</p>
+  </header>  <header class="sub-info">
+    <p>Informações Oficiais da Escola | <strong>Edição: AGOSTO/2025</strong></p>
+  </header>  <section>
+    <h2>DESTAQUE DO MÊS</h2>
+    <h3><i class="fas fa-trophy"></i> Prova Paulista 2025 - 2° Bimestre</h3>
+    <div class="highlight">
+      <p><strong><i class="far fa-calendar-alt"></i> Calendário:</strong></p>
+      <ul>
+        <li><strong>Inscrições:</strong> 10/06 a 20/06</li>
+        <li><strong>Prova:</strong> 05/07 (Salas 1 a 10)</li>
+        <li><strong>Resultados:</strong> 25/07 no mural da escola</li>
+      </ul>
+    </div>
+    <h4><i class="fas fa-book-open"></i> Plantões de Dúvida:</h4>
+    <table>
+      <tr><th>Matéria</th><th>Dia/Horário</th><th>Local</th></tr>
+      <tr><td>Matemática</td><td>Terças, 14h</td><td>Sala 7</td></tr>
+      <tr><td>Português</td><td>Quintas, 15h</td><td>Biblioteca</td></tr>
+    </table>
+    <div class="botoes-simulados">
+      <a href="regulamento.html" class="botao-azul">📄 Regulamento</a>
+      <a href="https://forms.gle/aXTgrb6aNFUcu2u88" class="botao-verde">📝 Simulado Online</a>
+    </div>
+  </section>  <section>
+    <h2>QUADRO DE AVISOS</h2>
+    <div class="event-card">
+      <h3><i class="fas fa-bullhorn"></i> Vagas Abertas:</h3>
+      <h4>Vestibular UNESP 2026</h4>
+      <p>Inscrições abertas até 30/08...</p>
+      <a href="https://forms.gle/aXTgrb6aNFUcu2u88">Leia mais</a>
+      <h4 style="margin-top: 15px;">Processo Seletivo ETEC 2026</h4>
+      <p>Inscrições a partir de 15/07...</p>
+      <a href="https://forms.gle/aXTgrb6aNFUcu2u88">Leia mais</a>
+    </div>
+  </section>  <section>
+    <h2>DESAFIO DO MÊS</h2>
+    <div class="event-card" style="text-align: center;">
+      <h3><i class="fas fa-brain"></i> Simulado da Prova Paulista</h3>
+      <a href="https://forms.gle/aXTgrb6aNFUcu2u88" class="simulado-btn">▶️ RESPONDER SIMULADO</a>
+    </div>
+  </section>  <section>
+    <h2>GALERIA DE TRABALHOS</h2>
+    <h3><i class="fas fa-microscope"></i> Projetos de Ciências:</h3>
+    <ol>
+      <li>Robótica Sustentável</li>
+      <li>Energia Solar Caseira</li>
+      <li>Plantio Hidropônico</li>
+    </ol>
+    <div class="centered-btn">
+      <a href="galeria.html" class="botao-azul">📸 Ver Galeria</a>
+    </div>
+  </section>  <section>
+    <h2>SEÇÃO DE DÚVIDAS</h2>
+    <div class="event-card"><p><strong>Q:</strong> Posso usar calculadora?<br><strong>R:</strong> Simples apenas.</p></div>
+    <div class="event-card"><p><strong>Q:</strong> Haverá segunda chamada?<br><strong>R:</strong> Sim, com atestado.</p></div>
+    <div class="centered-btn">
+      <a href="mailto:jornalata@escola.com" class="botao-verde">📨 Envie sua dúvida</a>
+    </div>
+  </section>  <section>
+    <h2>PRÓXIMOS EVENTOS</h2>
+    <div class="event-card">
+      <h3><i class="far fa-calendar-alt"></i> Calendário Junho 2025</h3>
+      <p><strong>Legenda:</strong> DIA T = Dia de Regularizar a Tarefa SP</p>
+    </div>
+    <div class="event-card">
+      <h3><i class="far fa-calendar-check"></i> Eventos em Destaque:</h3>
+      <ul>
+        <li><strong>20/06:</strong> Festa Junina</li>
+        <li><strong>27/06:</strong> Feira de Profissões</li>
+      </ul>
+    </div>
+  </section>  <div class="centered-btn" style="margin: 40px 0;">
+    <a href="horarios.html" class="horario-btn">📅 Horários e Aulas</a>
   </div>  <footer>
     <div class="social-links">
-      <a href="https://instagram.com/vitorrodrigues._s"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/jornalata"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/vitorrodrigues._s" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/jornalata" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="mailto:jornalata@escola.com"><i class="fas fa-envelope"></i></a>
     </div>
-    <p>© 2025 Jornal A.T.A | Todos os direitos reservados</p>
+    <p>© 2025 Jornal A.T.A | Desenvolvido por Vitor Rodrigues</p>
   </footer>
 </body>
-    </html>
+        </html>
