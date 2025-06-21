@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jornal A.T.A</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg-color: #1e1e2f;
+      --section-bg: #2c2c3c;
+      --text-color: #f0f0f0;
+      --accent-color: #3498db;
+      --accent-green: #2ecc71;
+      --card-bg: #2a2a3a;
+      --highlight-bg: #313144;
+    }body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+header.header-jornal {
+  background: linear-gradient(135deg, #2c3e50, var(--accent-color));
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header.subheader {
+  background-color: #29293a;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+section {
+  background-color: var(--section-bg);
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+h2 {
+  color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+h3, h4 {
+  color: #81cfff;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  color: #ddd;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 10px 15px;
+}
+
+th {
+  background-color: #3a3a4a;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #2e2e3e;
+}
+
+.highlight {
+  background-color: var(--highlight-bg);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-azul {
+  background-color: var(--accent-color);
+}
+
+.btn-verde {
+  background-color: var(--accent-green);
+}
+
+.event-card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 5px solid var(--accent-color);
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: #999;
+  font-size: 0.9em;
+  border-top: 1px solid #333;
+}
+
+.social-links a {
+  color: #bbb;
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+a {
+  color: #7fcfff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header-jornal">
+    <h1>Jornal A.T.A</h1>
+    <p>Atualizações da nossa escola — edição AGOSTO/2025</p>
+  </header>
+  <header class="subheader">
+    Informações Oficiais | Desenvolvido por Vitor Rodrigues
+  </header>  <div class="container">
+    <section>
+      <h2>🏆 Destaque do Mês</h2>
+      <h3>Prova Paulista 2025 - 2° Bimestre</h3>
+      <div class="highlight">
+        <p><strong>📅 Calendário:</strong></p>
+        <ul>
+          <li><strong>Inscrições:</strong> 10/06 a 20/06</li>
+          <li><strong>Prova:</strong> 05/07 (Salas 1 a 10)</li>
+          <li><strong>Resultados:</strong> 25/07 no mural</li>
+        </ul>
+      </div>
+      <h4>📘 Plantões de Dúvida:</h4>
+      <table>
+        <tr><th>Matéria</th><th>Dia/Horário</th><th>Local</th></tr>
+        <tr><td>Matemática</td><td>Terças, 14h</td><td>Sala 7</td></tr>
+        <tr><td>Português</td><td>Quintas, 15h</td><td>Biblioteca</td></tr>
+      </table>
+      <div style="text-align: center">
+        <a href="#" class="btn btn-azul">📄 Regulamento Completo</a>
+        <a href="#" class="btn btn-verde">🖊️ Simulado Online</a>
+      </div>
+    </section><section>
+  <h2>📌 Quadro de Avisos</h2>
+  <div class="event-card">
+    <h3>📣 Vagas Abertas</h3>
+    <p><strong>Vestibular UNESP 2026</strong><br>Inscrições até 30/08...</p>
+    <a href="#">Leia mais</a>
+  </div>
+  <div class="event-card">
+    <h4>Processo Seletivo ETEC 2026</h4>
+    <p>Inscrições a partir de 15/07...</p>
+    <a href="#">Leia mais</a>
+  </div>
+</section>
+
+<section>
+  <h2>🧠 Desafio do Mês</h2>
+  <div class="event-card" style="text-align: center">
+    <h3>Simulado da Prova Paulista</h3>
+    <a href="#" class="btn btn-azul">▶️ RESPONDER SIMULADO</a>
+  </div>
+</section>
+
+<section>
+  <h2>🖼️ Galeria de Trabalhos</h2>
+  <h3>Projetos de Ciências:</h3>
+  <ul>
+    <li>Robótica Sustentável</li>
+    <li>Energia Solar Caseira</li>
+    <li>Plantio Hidropônico</li>
+  </ul>
+  <div style="text-align: center">
+    <a href="#" class="btn btn-azul">📸 Ver Galeria</a>
+  </div>
+</section>
+
+  </div>  <footer>
+    <div class="social-links">
+      <a href="https://instagram.com/vitorrodrigues._s"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com/jornalata"><i class="fab fa-facebook"></i></a>
+      <a href="mailto:jornalata@escola.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© 2025 Jornal A.T.A | Todos os direitos reservados</p>
+  </footer>
+</body>
+    </html>
