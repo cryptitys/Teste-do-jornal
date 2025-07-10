@@ -1,221 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jornal A.T.A</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    :root {
-      --cor-primaria: #3498db;
-      --cor-secundaria: #2c3e50;
-      --cor-fundo: #f9f9f9;
-      --cor-texto: #333;
-      --cor-clara: #ffffff;
-      --cor-escura: #121212;
-    }
-
-    body.dark-mode {
-      --cor-fundo: #121212;
-      --cor-texto: #f0f0f0;
-      --cor-clara: #1e1e1e;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--cor-fundo);
-      color: var(--cor-texto);
-      line-height: 1.6;
-      margin: 0;
-      padding: 0 20px;
-      max-width: 900px;
-      margin: auto;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .header-jornal {
-      background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 0 0 15px 15px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-    }
-
-    .header-jornal h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-
-    .header-jornal p {
-      margin: 5px 0 0;
-      font-style: italic;
-    }
-
-    header:not(.header-jornal) {
-      text-align: center;
-      margin: 20px 0;
-      padding: 10px;
-      background-color: var(--cor-clara);
-      border-radius: 8px;
-      font-size: 0.9em;
-    }
-
-    section {
-      background: var(--cor-clara);
-      padding: 20px;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: background 0.3s;
-    }
-
-    h2 {
-      color: var(--cor-secundaria);
-      border-bottom: 2px solid var(--cor-primaria);
-      padding-bottom: 8px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-
-    th, td {
-      padding: 12px 15px;
-      border: 1px solid #ddd;
-    }
-
-    th {
-      background-color: var(--cor-primaria);
-      color: white;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    tr:hover {
-      background-color: #e6f7ff;
-    }
-
-    .highlight {
-      background: #e6f7ff;
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-
-    .botao {
-      padding: 12px 20px;
-      margin: 10px;
-      color: white;
-      background-color: var(--cor-primaria);
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      display: inline-block;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .botao:hover {
-      transform: scale(1.05);
-      background-color: #2980b9;
-    }
-
-    footer {
-      background: var(--cor-clara);
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 50px;
-      border-top: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .social-links a {
-      margin: 0 10px;
-      font-size: 1.5em;
-      color: var(--cor-secundaria);
-      transition: transform 0.2s;
-    }
-
-    .social-links a:hover {
-      color: var(--cor-primaria);
-      transform: translateY(-3px);
-    }
-
-    .modo-dark-btn {
-      background: none;
-      border: 2px solid var(--cor-primaria);
-      color: var(--cor-primaria);
-      border-radius: 6px;
-      padding: 6px 14px;
-      margin-top: 10px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .modo-dark-btn:hover {
-      background: var(--cor-primaria);
-      color: white;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jornal A.T.A – Informação que transforma</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 </head>
 <body>
-  <header class="header-jornal">
-    <h1>Bem-vindo ao Jornal A.T.A</h1>
-    <p>Notícias e atualizações sobre nossa escola - LANÇAMENTO OFICIAL</p>
-    <button class="modo-dark-btn" onclick="alternarModo()">🌓 Modo Escuro</button>
-  </header>
 
   <header>
-    <p>Informações Oficiais da Escola | <strong>Edição: AGOSTO/2025</strong></p>
+    <a href="#" class="brand" data-aos="zoom-in" data-aos-duration="1000">Jornal A.T.A</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <a href="#main">Início</a>
+      <a href="#about">Sobre</a>
+      <a href="#news">Notícias</a>
+      <a href="#editions">Edições</a>
+      <a href="#contact">Contato</a>
+    </div>
   </header>
 
-  <section>
-    <h2>Destaques</h2>
-    <p><strong>Prova Paulista:</strong> Resultado em 25/07.</p>
-    <div class="highlight">
-      <p><strong>Plantões de Dúvidas:</strong></p>
-      <ul>
-        <li>Matemática – Terças, 14h – Sala 7</li>
-        <li>Português – Quintas, 15h – Biblioteca</li>
-      </ul>
+  <section class="main" id="main">
+    <div class="content">
+      <h2 data-aos="fade-right" data-aos-duration="1000">Bem-vindo ao<br><span>Jornal A.T.A</span></h2>
+      <div class="animated-text" data-aos="fade-left" data-aos-duration="1000">
+        <h3>Informação que transforma</h3>
+        <h3>Produzido por alunos</h3>
+        <h3>Compromisso com a verdade</h3>
+      </div>
+      <a href="#news" class="btn" data-aos="zoom-out" data-aos-duration="1000">Veja as notícias</a>
     </div>
-    <a href="#" class="botao">📄 Regulamento</a>
-    <a href="#" class="botao">📝 Formulário</a>
   </section>
 
-  <section>
-    <h2>Galeria de Trabalhos</h2>
-    <ul>
-      <li>Robótica Sustentável</li>
-      <li>Energia Solar Caseira</li>
-      <li>Plantio Hidropônico</li>
-    </ul>
-    <a href="#" class="botao">📸 Ver Galeria</a>
+  <section class="about" id="about">
+    <div class="title">
+      <h2 class="section-title" data-aos="fade-up">Sobre o Jornal</h2>
+    </div>
+    <div class="content">
+      <div class="column col-left">
+        <div class="img-card" data-aos="fade-right">
+          <img src="Image/img1.jpg" alt="Equipe do jornal">
+        </div>
+      </div>
+      <div class="column col-right">
+        <h2 class="content-title" data-aos="fade-left">Uma Voz Estudantil</h2>
+        <p class="paragraph-text" data-aos="fade-up">
+          O <strong>Jornal A.T.A</strong> nasceu com o propósito de incentivar a expressão crítica dos alunos e mostrar que não existem limites para ser o que quiser. É um projeto pedagógico que promove a leitura, a escrita, a pesquisa e o protagonismo juvenil.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <div class="social-links">
-      <a href="https://www.instagram.com/vitorrodrigues._s" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://facebook.com/jornalata" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="mailto:jornalata@escola.com"><i class="fas fa-envelope"></i></a>
+  <section class="skills" id="news">
+    <div class="title">
+      <h2 class="section-title" data-aos="fade-up">Notícias em Destaque</h2>
     </div>
-    <p>© 2025 Jornal A.T.A | Desenvolvido por Vitor Rodrigues</p>
+    <div class="content">
+      <div class="column col-left">
+        <h2 class="content-title" data-aos="fade-right">Atualizações da escola</h2>
+        <p class="paragraph-text" data-aos="fade-up">
+          Acompanhe as últimas notícias, entrevistas com professores, eventos escolares e temas relevantes para nossa comunidade estudantil.
+        </p>
+      </div>
+      <div class="column col-right">
+        <div class="bar"><div class="info"><span>Feira de Ciências 2025</span><span>Novidade</span></div><div class="line html"></div></div>
+        <div class="bar"><div class="info"><span>Campanha Solidária</span><span>Sucesso</span></div><div class="line css"></div></div>
+        <div class="bar"><div class="info"><span>Semana do Meio Ambiente</span><span>Conscientização</span></div><div class="line javascript"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="editions">
+    <div class="title">
+      <h2 class="section-title" data-aos="fade-up">Edições Publicadas</h2>
+      <p data-aos="fade-up">Confira algumas das nossas publicações mais recentes:</p>
+    </div>
+    <div class="content">
+      <div class="card" data-aos="fade-up">
+        <div class="service-icon"><i class="fas fa-file-pdf"></i></div>
+        <div class="info"><h3>Edição Abril 2025</h3></div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="service-icon"><i class="fas fa-file-pdf"></i></div>
+        <div class="info"><h3>Edição Maio 2025</h3></div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="service-icon"><i class="fas fa-file-pdf"></i></div>
+        <div class="info"><h3>Edição Junho 2025</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="title">
+      <h2 class="section-title">Contato</h2>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="card"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="info"><h3>Email</h3><span>jornalata@escola.com</span></div></div>
+        <div class="card"><div class="contact-icon"><i class="fas fa-user-friends"></i></div><div class="info"><h3>Coordenação</h3><span>Prof. Responsável</span></div></div>
+        <div class="card"><div class="contact-icon"><i class="fas fa-globe"></i></div><div class="info"><h3>Site</h3><span>jornalata.web</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span class="footer-title">Jornal A.T.A</span>
+    <p>© 2025 Jornal A.T.A. Projeto educacional sem fins lucrativos.</p>
   </footer>
 
-  <script>
-    function alternarModo() {
-      document.body.classList.toggle("dark-mode");
-      const btn = document.querySelector(".modo-dark-btn");
-      btn.innerText = document.body.classList.contains("dark-mode") ? "🔆 Modo Claro" : "🌓 Modo Escuro";
-    }
-  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({offset:0});</script>
 </body>
 </html>
-
